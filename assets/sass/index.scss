@@ -1,0 +1,102 @@
+@import "../css/reset.css";
+@import "globals/mixin";
+@import "globals/variables";
+
+@include wrapper("normal", 80%);
+@include wrapper("large", 83%);
+@include img;
+@include backgroundImage("banner",'../images/banner-bg.jpg',rgba(0,0,0,.6),"true");
+@include backgroundImage("data",'../images/ramp.jpg',rgba(24, 24, 238, .5),"true");
+@include backgroundImage("form ",'../images/form-bg.jpg',rgba(0, 0, 0, .7),"true");
+@include backgroundImage("feedback",'../images/furnace.jpg',rgba(0, 0, 0, .7),"true");
+
+//common styling
+header .wrapper-large,.nav-items,.nav-item:nth-last-child(3):hover .blogs , .banner .wrapper,
+.service,.icon span,.request-quote .wrapper-large, .form,form[name=contact],.markets,
+.posts,.statistics,.stat,.number, .gallery-items,.fb-block ,.fb-block figure::before ,.feedbacks,
+.fb,.controls,.post, .user ,.connects ,.connect,.subscribe-form ,form[name=subs-email], .links 
+{ @include flex(true);}
+
+.btn {
+  @include boxModel(false,false,11px 0,2px solid #fab700);
+  background-color: #fab700;
+  @include font(#fff,false,14px,900,uppercase);
+}
+
+/*header start here*/
+header {
+  .wrapper-large {  @include boxModel(false,false,18px 0 );}
+
+  nav { flex: 1 45%;}
+
+  .logo {  @include boxModel(50%);}
+
+  .nav-items {
+    @include boxModel(100%);
+    @include flex(false,false,flex-end);
+  }
+
+  .nav-item { @include boxModel(false,false,10px 5% 10px 0);}
+
+  .nav-item a {
+    @include font(#454545,false,12px,false,uppercase);
+      &:hover{  color: #fab700}
+  }
+
+  .nav-item:nth-last-child(3) { 
+    @include position(relative);
+    &>a::after {
+      @include boxModel(false,false,0 0 0 15%);
+      @include font(#000,false,12px,false,uppercase);
+      @include icon('\f107');
+    }
+    &>a:hover::after {  content: '\f106';}
+
+    &:hover .blogs { @include flex(true)}
+  }
+
+  .blogs {
+    @include boxModel(false,false, 10px 20%);
+    @include display(none);
+    @include position(absolute);
+    background-color: #fff;
+    @include flex(false,false,false,false,column);
+
+    .blog {
+      @include boxModel(false,false, 10px 0);
+      @include font(#000,false,false,600);
+    }
+
+  }
+
+  .menu { @include display(none);}
+
+}
+/*header ends here*/
+
+.banner {
+  @include boxModel(false,false,101px 0 205px 0);
+  .wrapper { @include flex(false,false,false,center,column);}
+
+  .banner-sub-title { @include font(#fff,false,16px,false,uppercase,center);}
+
+  .banner-title {
+    @include boxModel(false,false,29px 0 35px 0);
+    @include font(#fff,false,48px,900,capitalize,center);
+  }
+  
+   p {
+    @include boxModel(65%,false,0 0 18px 0);
+    @include font(#fff,false,16px,false,false,center);
+    line-height: 1.5;
+  }
+  
+  .btn-start { @include boxModel(false,false,11px 2%);}
+  
+  .btn:hover {
+    background-color: #fff;
+    @include font(#fab700);
+  }
+}
+
+/*banner ends here*/
