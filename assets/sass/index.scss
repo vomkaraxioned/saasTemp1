@@ -5,98 +5,403 @@
 @include wrapper("normal", 80%);
 @include wrapper("large", 83%);
 @include img;
-@include backgroundImage("banner",'../images/banner-bg.jpg',rgba(0,0,0,.6),"true");
-@include backgroundImage("data",'../images/ramp.jpg',rgba(24, 24, 238, .5),"true");
-@include backgroundImage("form ",'../images/form-bg.jpg',rgba(0, 0, 0, .7),"true");
-@include backgroundImage("feedback",'../images/furnace.jpg',rgba(0, 0, 0, .7),"true");
+@include backgroundImage("banner", '../images/banner-bg.jpg', rgba(0, 0, 0, .6), "true");
+@include backgroundImage("data", '../images/ramp.jpg', rgba(24, 24, 238, .5), "true");
+@include backgroundImage("form ", '../images/form-bg.jpg', rgba(0, 0, 0, .7), "true");
+@include backgroundImage("feedback", '../images/furnace.jpg', rgba(0, 0, 0, .7), "true");
 
 //common styling
-header .wrapper-large,.nav-items,.nav-item:nth-last-child(3):hover .blogs , .banner .wrapper,
-.service,.icon span,.request-quote .wrapper-large, .form,form[name=contact],.markets,
-.posts,.statistics,.stat,.number, .gallery-items,.fb-block ,.fb-block figure::before ,.feedbacks,
-.fb,.controls,.post, .user ,.connects ,.connect,.subscribe-form ,form[name=subs-email], .links 
-{ @include flex(true);}
+header .wrapper-large,
+.nav-items,
+.nav-item:nth-last-child(3):hover .blogs,
+.banner .wrapper,
+.services,
+.service,
+.icon span,
+.request-quote .wrapper-large,
+.form,
+form[name=contact],
+.markets,
+.posts,
+.statistics,
+.stat,
+.number,
+.gallery-items,
+.fb-block,
+.fb-block figure::before,
+.feedbacks,
+.fb,
+.controls,
+.post,
+.user,
+.connects,
+.connect,
+.subscribe-form,
+form[name=subs-email],
+.links {
+  @include flex(true);
+}
 
 .btn {
-  @include boxModel(false,false,11px 0,2px solid #fab700);
+  @include boxModel(false, false, 11px 0, 2px solid #fab700);
   background-color: #fab700;
-  @include font(#fff,false,14px,900,uppercase);
+  @include font(#fff, false, 14px, 900, uppercase);
 }
 
 /*header start here*/
 header {
-  .wrapper-large {  @include boxModel(false,false,18px 0 );}
+  .wrapper-large {
+    @include boxModel(false, false, 18px 0);
+  }
 
-  nav { flex: 1 45%;}
+  nav {
+    flex: 1 45%;
+  }
 
-  .logo {  @include boxModel(50%);}
+  .logo {
+    @include boxModel(50%);
+  }
 
   .nav-items {
     @include boxModel(100%);
-    @include flex(false,false,flex-end);
+    @include flex(false, false, flex-end);
   }
 
-  .nav-item { @include boxModel(false,false,10px 5% 10px 0);}
+  .nav-item {
+    @include boxModel(false, false, 10px 5% 10px 0);
+  }
 
   .nav-item a {
-    @include font(#454545,false,12px,false,uppercase);
-      &:hover{  color: #fab700}
+    @include font(#454545, false, 12px, false, uppercase);
+
+    &:hover {
+      color: #fab700
+    }
   }
 
-  .nav-item:nth-last-child(3) { 
+  .nav-item:nth-last-child(3) {
     @include position(relative);
+
     &>a::after {
-      @include boxModel(false,false,0 0 0 15%);
-      @include font(#000,false,12px,false,uppercase);
+      @include boxModel(false, false, 0 0 0 15%);
+      @include font(#000, false, 12px, false, uppercase);
       @include icon('\f107');
     }
-    &>a:hover::after {  content: '\f106';}
 
-    &:hover .blogs { @include flex(true)}
+    &>a:hover::after {
+      content: '\f106';
+    }
+
+    &:hover .blogs {
+      @include flex(true)
+    }
   }
 
   .blogs {
-    @include boxModel(false,false, 10px 20%);
+    @include boxModel(false, false, 10px 20%);
     @include display(none);
     @include position(absolute);
+    @include flex(false, false, false, false, column);
     background-color: #fff;
-    @include flex(false,false,false,false,column);
 
     .blog {
-      @include boxModel(false,false, 10px 0);
-      @include font(#000,false,false,600);
+      @include boxModel(false, false, 10px 0);
+      @include font(#000, false, false, 600);
     }
 
   }
 
-  .menu { @include display(none);}
+  .menu {
+    @include display(none);
+  }
 
 }
+
 /*header ends here*/
 
 .banner {
-  @include boxModel(false,false,101px 0 205px 0);
-  .wrapper { @include flex(false,false,false,center,column);}
+  @include boxModel(false, false, 101px 0 205px 0);
 
-  .banner-sub-title { @include font(#fff,false,16px,false,uppercase,center);}
+  .wrapper {
+    @include flex(false, false, false, center, column);
+  }
+
+  .banner-sub-title {
+    @include font(#fff, false, 16px, false, uppercase, center);
+  }
 
   .banner-title {
-    @include boxModel(false,false,29px 0 35px 0);
-    @include font(#fff,false,48px,900,capitalize,center);
+    @include boxModel(false, false, 29px 0 35px 0);
+    @include font(#fff, false, 48px, 900, capitalize, center);
   }
-  
-   p {
-    @include boxModel(65%,false,0 0 18px 0);
-    @include font(#fff,false,16px,false,false,center);
+
+  p {
+    @include boxModel(65%, false, 0 0 18px 0);
+    @include font(#fff, false, 16px, false, false, center);
     line-height: 1.5;
   }
-  
-  .btn-start { @include boxModel(false,false,11px 2%);}
-  
+
+  .btn-start {
+    @include boxModel(false, false, 11px 2%);
+  }
+
   .btn:hover {
-    background-color: #fff;
     @include font(#fab700);
+    background-color: #fff;
   }
 }
 
 /*banner ends here*/
+
+/*services start here*/
+
+.services {
+  @include boxModel(false, false, 129px 0 135px 0);
+  @include flex(false, false, space-between);
+
+  .service {
+    @include boxModel(false, false, 0 10% 0 0);
+    @include flex(false, false, false, center, column);
+    @include position(relative);
+  }
+
+  .service:last-child {
+    @include boxModel(false, false, 0);
+  }
+
+  & .icon {
+    @include boxModel(62px, 38px, 0, false);
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    @include borderRadius(5px);
+    @include position(relative);
+    transition: all 1s;
+  }
+
+  .icon::before,
+  .icon::after {
+    @include boxModel(inherit, inherit, false, inherit);
+    @include borderRadius(inherit);
+    @include position(absolute, 0, false, false, 0);
+    content: "";
+  }
+
+  .icon::before {
+    transform: rotate(60deg);
+  }
+
+  .icon::after {
+    transform: rotate(-60deg);
+  }
+
+  .icon span {
+    @include boxModel(inherit, inherit);
+    @include flex(false, false, center, center);
+    text-indent: -9999px;
+  }
+
+  .service:nth-child(1) .icon span::before {
+    @include icon('\e2ca', true);
+  }
+
+  .service:nth-child(2) .icon span::before {
+    @include icon('\f135', true);
+  }
+
+  .service:nth-child(3) .icon span::before {
+    @include icon('\f188', true);
+  }
+
+  .service-title {
+    @include boxModel(false, false, 40px 0 28px 0);
+    @include font(#000, false, 16px, 900, false, center);
+  }
+
+  .service-description {
+    @include font(#454545, false, 16px, false, false, center);
+    line-height: 1.5;
+  }
+}
+
+/*services end here*/
+
+/*quotes start here*/
+
+.request-quote {
+  @include boxModel(false, false, 115px 0);
+  background-color: #f9f9ff;
+}
+
+.description {
+  @include boxModel(false, false, 30px 0 0 0);
+  @include flex(false, 66.6%);
+}
+
+.quote-sub-title {
+  @include font(#f9bb65, false, 16px);
+}
+
+.quote-title {
+  @include boxModel(48%, false, 16px 0 34px 0);
+  @include font(#252525, false, 36px, 900);
+}
+
+.quote-line {
+  @include boxModel(false, false, 0 0 16px 0);
+  @include font(#252525);
+}
+
+.quote-description {
+  @include boxModel(95%, false, 0 0 40px 0);
+  @include font(#454545, false, false, false, false, justify);
+  line-height: 1.5;
+}
+
+.btn-start-now {
+  @include boxModel(false, false, 11px 6%);
+}
+
+.form {
+  flex: 1;
+  @include boxModel(false, false, 31px, $autoMargin);
+  @include flex(false, false, center, center, column);
+}
+
+form[name=contact] {
+  @include boxModel(90%);
+  @include flex(false, false, false, center, column);
+}
+
+.form-title {
+  @include boxModel(90%, false, 0 0 16px 0);
+  @include font(#fff, false, 21px, 700, false, left)
+}
+
+input,
+select {
+  box-sizing: border-box;
+  @include boxModel(100%, false, 10px 2%, 1px solid #fff);
+  background-color: transparent;
+  @include font(#fff);
+}
+
+.select-service {
+  @include position(relative);
+}
+
+.select-service::before {
+  @include position(absolute, 25%, 5%);
+  @include font(#656565);
+  @include icon('\f107');
+}
+
+select {
+  appearance: none;
+}
+
+option {
+  @include font(#000);
+}
+
+textarea {
+  box-sizing: border-box;
+  min-height: 108px;
+  @include boxModel(100%, false, 5px 2%, 1px solid #fff);
+  @include display(block);
+  background-color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @include font(#fff);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: transparent;
+}
+
+input[type=submit] {
+  @include font(false, false, 12px);
+}
+
+.form div {
+  @include boxModel(100%);
+}
+
+.select-service,
+.name,
+.phone,
+.email,
+.textarea {
+  @include boxModel(false, false, 0 0 4px 0);
+}
+
+/*quotes ends here*/
+
+/*market start here*/
+
+section.market {
+  @include boxModel(123px 0 134px 0);
+
+  .market-title,
+  .gallery-title,
+  .post-title {
+    @include font(false, false, 40px, 600, capitalize, center);
+  }
+
+  .market-title {
+    @include boxModel(0 0 10px 0);
+  }
+
+  .market-sub-title,
+  .gallery-sub-title,
+  .post-sub-title {
+    @include font(#454545, false, 16px, false, false, center);
+  }
+
+  .market-sub-title {
+    @include boxModel(false, false, 0 0 50px 0);
+  }
+
+  li.market:nth-child(2),
+  .post:nth-child(2) {
+    @include boxModel(false, false, 0 3%);
+  }
+
+  h5 {
+    @include boxModel(false, false, 22px 0);
+    @include font(#000, false, 21px, 700);
+  }
+
+  .description {
+    @include boxModel(100%, false, 0);
+    @include font(#454545, false, 16px);
+    line-height: 1.5;
+  }
+}
+
+/*market end here*/
+
+ /*data start here */
+        
+ .data { @include boxModel(false,false,118px 0 137px 0);}
+
+.statistics { @include flex(false,false,center);}
+
+.stat {
+  @include boxModel(false,false,0 10.7% 0 0);
+  @include flex(false,false,false,center,column);
+  &:last-child {
+    @include boxModel(false,false,0);
+  }
+}
+
+.number {
+  @include boxModel(91px,91px,0);
+
+}
+
+
+/*data end here*/

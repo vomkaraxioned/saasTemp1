@@ -1,127 +1,471 @@
-@import url(../css/reset.css);
+@import "../css/reset.css";
 .wrapper {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .wrapper-large {
   width: 83%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  object-position: center; }
+  object-position: center;
+}
 
 .banner {
   background: url("../images/banner-bg.jpg") rgba(0, 0, 0, 0.6) center no-repeat;
   background-size: cover;
-  background-blend-mode: overlay; }
+  background-blend-mode: overlay;
+}
 
 .data {
   background: url("../images/ramp.jpg") rgba(24, 24, 238, 0.5) center no-repeat;
   background-size: cover;
-  background-blend-mode: overlay; }
+  background-blend-mode: overlay;
+}
 
 .form {
   background: url("../images/form-bg.jpg") rgba(0, 0, 0, 0.7) center no-repeat;
   background-size: cover;
-  background-blend-mode: overlay; }
+  background-blend-mode: overlay;
+}
 
 .feedback {
   background: url("../images/furnace.jpg") rgba(0, 0, 0, 0.7) center no-repeat;
   background-size: cover;
-  background-blend-mode: overlay; }
+  background-blend-mode: overlay;
+}
 
-header .wrapper-large, .nav-items, .nav-item:nth-last-child(3):hover .blogs, .banner .wrapper,
-.service, .icon span, .request-quote .wrapper-large, .form, form[name=contact], .markets,
-.posts, .statistics, .stat, .number, .gallery-items, .fb-block, .fb-block figure::before, .feedbacks,
-.fb, .controls, .post, .user, .connects, .connect, .subscribe-form, form[name=subs-email], .links {
-  display: flex; }
+header .wrapper-large,
+.nav-items,
+.nav-item:nth-last-child(3):hover .blogs,
+.banner .wrapper,
+.services,
+.service,
+.icon span,
+.request-quote .wrapper-large,
+.form,
+form[name=contact],
+.markets,
+.posts,
+.statistics,
+.stat,
+.number,
+.gallery-items,
+.fb-block,
+.fb-block figure::before,
+.feedbacks,
+.fb,
+.controls,
+.post,
+.user,
+.connects,
+.connect,
+.subscribe-form,
+form[name=subs-email],
+.links {
+  display: flex;
+}
 
 .btn {
   padding: 11px 0;
   border: 2px solid #fab700;
   background-color: #fab700;
-  color: white;
+  color: #fff;
   font-size: 14px;
   font-weight: 900;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*header start here*/
 header .wrapper-large {
-  padding: 18px 0; }
+  padding: 18px 0;
+}
 header nav {
-  flex: 1 45%; }
+  flex: 1 45%;
+}
 header .logo {
-  width: 50%; }
+  width: 50%;
+}
 header .nav-items {
   width: 100%;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+}
 header .nav-item {
-  padding: 10px 5% 10px 0; }
+  padding: 10px 5% 10px 0;
+}
 header .nav-item a {
   color: #454545;
   font-size: 12px;
-  text-transform: uppercase; }
-  header .nav-item a:hover {
-    color: #fab700; }
+  text-transform: uppercase;
+}
+header .nav-item a:hover {
+  color: #fab700;
+}
 header .nav-item:nth-last-child(3) {
-  position: relative; }
-  header .nav-item:nth-last-child(3) > a::after {
-    padding: 0 0 0 15%;
-    color: black;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-family: 'FontAwesome';
-    font-weight: 900;
-    content: "\f107"; }
-  header .nav-item:nth-last-child(3) > a:hover::after {
-    content: '\f106'; }
-  header .nav-item:nth-last-child(3):hover .blogs {
-    display: flex; }
+  position: relative;
+}
+header .nav-item:nth-last-child(3) > a::after {
+  padding: 0 0 0 15%;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f107";
+}
+header .nav-item:nth-last-child(3) > a:hover::after {
+  content: "\f106";
+}
+header .nav-item:nth-last-child(3):hover .blogs {
+  display: flex;
+}
 header .blogs {
   padding: 10px 20%;
   display: none;
   position: absolute;
+  flex-direction: column;
   background-color: #fff;
-  flex-direction: column; }
-  header .blogs .blog {
-    padding: 10px 0;
-    color: black;
-    font-weight: 600; }
+}
+header .blogs .blog {
+  padding: 10px 0;
+  color: #000;
+  font-weight: 600;
+}
 header .menu {
-  display: none; }
+  display: none;
+}
 
 /*header ends here*/
 .banner {
-  padding: 101px 0 205px 0; }
-  .banner .wrapper {
-    align-items: center;
-    flex-direction: column; }
-  .banner .banner-sub-title {
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    text-transform: uppercase; }
-  .banner .banner-title {
-    padding: 29px 0 35px 0;
-    color: white;
-    font-size: 48px;
-    font-weight: 900;
-    text-align: center;
-    text-transform: capitalize; }
-  .banner p {
-    width: 65%;
-    padding: 0 0 18px 0;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1.5; }
-  .banner .btn-start {
-    padding: 11px 2%; }
-  .banner .btn:hover {
-    background-color: #fff;
-    color: #fab700; }
+  padding: 101px 0 205px 0;
+}
+.banner .wrapper {
+  align-items: center;
+  flex-direction: column;
+}
+.banner .banner-sub-title {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.banner .banner-title {
+  padding: 29px 0 35px 0;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: capitalize;
+}
+.banner p {
+  width: 65%;
+  padding: 0 0 18px 0;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+.banner .btn-start {
+  padding: 11px 2%;
+}
+.banner .btn:hover {
+  color: #fab700;
+  background-color: #fff;
+}
 
 /*banner ends here*/
+/*services start here*/
+.services {
+  padding: 129px 0 135px 0;
+  justify-content: space-between;
+}
+.services .service {
+  padding: 0 10% 0 0;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.services .service:last-child {
+  padding: 0;
+}
+.services .icon {
+  width: 62px;
+  height: 38px;
+  padding: 0;
+  border-right: 1px solid #cdcdcd;
+  border-left: 1px solid #cdcdcd;
+  border-radius: 5px;
+  position: relative;
+  transition: all 1s;
+}
+.services .icon::before,
+.services .icon::after {
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.services .icon::before {
+  transform: rotate(60deg);
+}
+.services .icon::after {
+  transform: rotate(-60deg);
+}
+.services .icon span {
+  width: inherit;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  text-indent: -9999px;
+}
+.services .service:nth-child(1) .icon span::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\e2ca";
+}
+.services .service:nth-child(2) .icon span::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f135";
+}
+.services .service:nth-child(3) .icon span::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f188";
+}
+.services .service-title {
+  padding: 40px 0 28px 0;
+  color: #000;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+}
+.services .service-description {
+  color: #454545;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/*services end here*/
+/*quotes start here*/
+.request-quote {
+  padding: 115px 0;
+  background-color: #f9f9ff;
+}
+
+.description {
+  padding: 30px 0 0 0;
+  flex-basis: 66.6%;
+}
+
+.quote-sub-title {
+  color: #f9bb65;
+  font-size: 16px;
+}
+
+.quote-title {
+  width: 48%;
+  padding: 16px 0 34px 0;
+  color: #252525;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.quote-line {
+  padding: 0 0 16px 0;
+  color: #252525;
+}
+
+.quote-description {
+  width: 95%;
+  padding: 0 0 40px 0;
+  color: #454545;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.btn-start-now {
+  padding: 11px 6%;
+}
+
+.form {
+  flex: 1;
+  padding: 31px;
+  border: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form[name=contact] {
+  width: 90%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-title {
+  width: 90%;
+  padding: 0 0 16px 0;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: left;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 2%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.select-service {
+  position: relative;
+}
+
+.select-service::before {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  color: #656565;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f107";
+}
+
+select {
+  appearance: none;
+}
+
+option {
+  color: #000;
+}
+
+textarea {
+  box-sizing: border-box;
+  min-height: 108px;
+  width: 100%;
+  padding: 5px 2%;
+  border: 1px solid #fff;
+  display: block;
+  background-color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: transparent;
+}
+
+input[type=submit] {
+  font-size: 12px;
+}
+
+.form div {
+  width: 100%;
+}
+
+.select-service,
+.name,
+.phone,
+.email,
+.textarea {
+  padding: 0 0 4px 0;
+}
+
+/*quotes ends here*/
+/*market start here*/
+section.market {
+  width: 123px 0 134px 0;
+}
+section.market .market-title,
+section.market .gallery-title,
+section.market .post-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+section.market .market-title {
+  width: 0 0 10px 0;
+}
+section.market .market-sub-title,
+section.market .gallery-sub-title,
+section.market .post-sub-title {
+  color: #454545;
+  font-size: 16px;
+  text-align: center;
+}
+section.market .market-sub-title {
+  padding: 0 0 50px 0;
+}
+section.market li.market:nth-child(2),
+section.market .post:nth-child(2) {
+  padding: 0 3%;
+}
+section.market h5 {
+  padding: 22px 0;
+  color: #000;
+  font-size: 21px;
+  font-weight: 700;
+}
+section.market .description {
+  width: 100%;
+  padding: 0;
+  color: #454545;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/*market end here*/
+/*data start here */
+.data {
+  padding: 118px 0 137px 0;
+}
+
+.statistics {
+  justify-content: center;
+}
+
+.stat {
+  padding: 0 10.7% 0 0;
+  align-items: center;
+  flex-direction: column;
+}
+.stat:last-child {
+  padding: 0;
+}
+
+.number {
+  width: 91px;
+  height: 91px;
+  padding: 0;
+}
+
+/*data end here*/
+
+/*# sourceMappingURL=style.css.map */

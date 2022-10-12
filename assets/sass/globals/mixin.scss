@@ -134,3 +134,6 @@
    }
 }
 
+@mixin  borderRadius($r) {
+  border-radius: $r;
+}
