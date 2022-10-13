@@ -46,6 +46,10 @@ form[name=subs-email],
   @include boxModel(false, false, 11px 0, 2px solid #fab700);
   background-color: #fab700;
   @include font(#fff, false, 14px, 900, uppercase);
+  &:hover {
+    @include font(#fab700);
+    background-color: #fff;
+  }
 }
 
 /*header start here*/
@@ -145,10 +149,6 @@ header {
     @include boxModel(false, false, 11px 2%);
   }
 
-  .btn:hover {
-    @include font(#fab700);
-    background-color: #fff;
-  }
 }
 
 /*banner ends here*/
@@ -353,11 +353,6 @@ section.market {
     @include boxModel(false, false, 0 0 50px 0);
   }
 
-  li.market:nth-child(2),
-  .post:nth-child(2) {
-    @include boxModel(false, false, 0 3%);
-  }
-
   h5 {
     @include boxModel(false, false, 22px 0);
     @include font(#000, false, 21px, 700);
@@ -381,6 +376,12 @@ section.market {
 .post-title {
   @include font(false, false, 40px, 600, capitalize, center);
 }
+
+li.market:nth-child(2),
+  .post:nth-child(2) {
+    @include boxModel(false, false, 0 3%);
+  }
+
 
 /*market end here*/
 
@@ -626,5 +627,330 @@ section:last-child { @include boxModel(false,false,125px 0 164px 0);}
  /*feedback end here*/
 
 /*footer start here */
+  
+footer {
+  @include boxModel(false,false,102px 0 137px 0);
+  background-color: #04091e;
+}
+
+.connect {  
+  @include flex(false,false,false,false,column);
+
+  &:first-child {  @include flex(false,42%);}
+
+&:nth-child(2) {
+  @include boxModel(false,false, 0 7% 0 3%);
+  @include flex(false,35%);
+}
+
+&:nth-child(3) {  flex: 1;}
+
+&-head {
+  @include boxModel(false,false, 0 0 31px 0);
+  @include font(#fff,false,18px,900);
+}
+}
+
+.about-us-description,
+.copyright {
+  @include boxModel(false,false,0 0 39px 0);
+  @include font(#454545,false,16px);
+  line-height: 1.5;
+}
+
+.copyright {   
+  @include boxModel(false,false,0);
+
+  & span,
+& a {
+  @include display(inline-block);
+  @include font(#ffa500,false,false,false,capitalize);
+}
+
+& a:hover {  @include font(#fff);}
+
+& span:first-child {  text-indent: -9999px;}
+
+& span:first-child::before {  @include icon('\f004',true);}
+}
+
+.newsletter-description,
+.follow-description {
+  @include boxModel(false,false,0 0 18px 0);
+  @include font(#454545,false,16px);
+}
+
+.subs-mail {  @include flex(false,90%);}
+
+.subscribe {
+  flex: 1;
+ @include position(relative);
+
+&::before {
+  @include position(absolute,25%,false,false,25%);
+  @include font(#fff,false,21px);
+  @include icon('\f061');
+}
+
+&:hover::before {   @include font(#000);}
+
+}
+
+form[name=subs-email] {
+  @include boxModel(100%);
+  @include flex(false,false,center,center);
+}
+
+input[name=subs-mail],
+input[name=email-submit] {
+  @include boxModel(false,false,13px 3%,none);
+  background-color: #fff;
+  @include font(#000);
+}
+
+input[name=email-submit] {
+  @include boxModel(false,false,14px 0);
+  background-color: #ffa500;
+}
+
+input[name=email-submit] {  text-indent: -9999px;}
+
+.link {  
+  @include boxModel(false,false,0 20% 0 0);
+
+  .link:last-child {  @include boxModel(false,false,0);}
+
+& a {
+  @include display(block);
+  @include font(#fff,false,12px);
+  text-indent: -9999px;
+}
+
+&:nth-child(1) a::before {  @include icon('\f39e',true);}
+
+&:nth-child(2) a::before {   @include icon('\f099',true);}
+
+&:nth-child(3) a::before {   @include icon('\f434',true);}
+
+&:nth-child(4) a::before {   @include icon('\f1b4',true);}
+
+& a:hover {  @include font(#ffa500);}
+
+}
+
+input[name=subs-mail]::placeholder {   @include font(#454545);}
 
 /*footer end here */
+
+   /*media query for 995px starts here*/
+        
+   @media only screen and (max-width: 995px) {
+
+    .description {   @include flex(false,60%);}
+
+    .quote-title {  @include boxModel(95%);}
+
+    .form {    @include boxModel(false,false,0 3%);}
+
+    .stat {    @include boxModel(false,false,0 7% 0 0);}
+
+    .fb-block figure {   max-height: 800px;}
+
+    .client-name {  @include flex(false,100%);}
+
+    .rating {  @include boxModel(false,false,0);}
+
+    .user-name {  @include boxModel(false,false,0 2%);}
+
+    .date {  @include flex(false,15%);}
+
+    .subscribe::before {  left: 5%;}
+
+    .connect:first-child {  @include flex(false,35%);}
+}
+ /*media query for 995px end here*/
+
+ /*media query for 768px starts here*/
+        
+ @media only screen and (max-width: 768px) {
+
+  .nav-items {  @include display(none);}
+
+  .menu {
+    @include boxModel(false,100%);
+    @include flex(true,false,right,center);
+    @include position (relative);
+    @include font(false,false,21px);
+      text-indent: -9999px;
+    
+    &::before {  @include icon('\f0c9');}
+  
+  &:hover::before {
+      @include font(#ffa500);
+      content: '\f00d';
+      transition: all 2s;
+  }
+  &:hover+.nav-items {
+    @include boxModel(50%);
+    z-index: 10;
+    @include flex(true,false,center,center,column);
+    @include position(absolute,false,0);
+    transition: all 2s;
+  }
+  }
+
+  .banner p { @include boxModel(100%);}
+
+  .services {
+    @include boxModel(fasle,false,50px 0);
+    @include flex(false,false,false,false,column);
+  }
+
+  .service { @include boxModel(fasle,false,25px 0);}
+
+  .service-description {  text-align: justify;}
+
+  .request-quote .wrapper-large { @include flex(false,false,center,center,column);}
+
+  .request-quote .description {
+    @include boxModel(false,false,40px);
+    @include flex(true,false,center,center,column);
+  }
+
+  .quote-sub-title,
+  .quote-title,
+  .quote-line,
+  .quote-description {
+      @include boxModel(100%);
+      text-align: center;
+  }
+
+  .quote-description {  text-align: left;}
+
+  .form {  @include boxModel(80%,false,31px);}
+  
+  section.market {   @include boxModel(false,false,100px 0);}
+
+  .markets {  @include flex(false,false,false,false,column);}
+
+  li.market:nth-child(2) {  @include boxModel(false,false,40px 0);}
+
+  .market h5 {  text-align: center;}
+
+  .market .description {  text-align: justify;}
+
+  .data { @include boxModel(false,false,80px 0);}
+
+  .statistics { @include flex(false,false,center,center,false,wrap);}
+
+  .stat { 
+    @include boxModel(false,false,20px 0);
+    @include flex(false,50%);
+  }
+
+  .gallery {  @include boxModel(false,false,100px 0);}
+
+  .feedback {   @include boxModel(false,false,80px 0);}
+
+  .fb-block { @include flex(false,false,center,center,column);}
+
+  .controls {  @include flex(false,false,center);}
+
+  section:last-child {  @include boxModel(false,false,100px 0);}
+
+  .post-sub-title {   @include boxModel(80%);}
+
+  .posts {  @include flex(false,false,center,center,column);}
+
+  .post:nth-child(2) {   @include boxModel(false,false,40px 0);}
+
+  .post>figure {
+      min-height: 215px;
+      max-height: 215px;
+      @include flex(true);
+      overflow: hidden;
+  }
+
+  .post .post-title {  text-align: center;}
+
+  .post-description {  text-align: justify;}
+
+  .connects {  @include flex(false,false,center,center,column);}
+
+  .connect { @include boxModel(80%);}
+
+  .connect:nth-child(3) {  @include boxModel(false,false,50px 0);}
+
+  .connect-head,
+  .newsletter-description,
+  .follow-description,
+  .about-us-description,
+  .copyright {  text-align: center;}
+
+  .connect:first-child {  order: 1;}
+
+  .subscribe::before {  left: 25%;}
+
+  .links { @include flex(false,false,center,center);}
+
+  .link { @include boxModel(false,false,0 5% 0 0);}
+
+  .link a::before {  @include font(false,false,21px);}
+
+  .user-name,
+  .date {
+      flex: 1;
+  }
+}
+ /*media query for 768px end here*/
+
+ /*media query for 540px starts here*/
+        
+ @media only screen and (max-width: 540px) {
+
+  .banner {  @include boxModel(false,false,80px 0);}
+
+  .statistics { @include flex(false,false,false,false,column);}
+
+  .gallery-items {  @include flex(false,false,center,center,column);}
+
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(2),
+  .gallery-item:nth-child(3),
+  .gallery-item:nth-child(4) {
+      min-height: 366px;
+      max-height: 366px;
+      @include boxModel(100%,false,0 0 40px 0);
+      @include flex(true);
+      overflow: hidden;
+  }
+
+  .gallery-item img,.post img {  height: auto;}
+
+  .footer {  @include boxModel(false,false,100px 0);}
+
+  .connect:nth-child(3) {   @include boxModel(false,false,80px 0);}
+
+  .user img {  @include boxModel(false,100%);}
+}
+
+/*media query for 425px starts here*/
+
+@media only screen and (max-width: 425px) {
+  .user-name,
+  .date { @include flex(false,25%);}
+
+  .clients-fb { @include boxModel(false,false,50px 0);}
+
+  .subscribe::before {  left: 0;}
+}
+/*media query for 320px starts here*/
+
+@media only screen and (max-width: 320px) {
+  .quote-title,
+  .market-title,
+  .gallery-title,
+  .post-title { @include font(false,false,28px);}
+
+  .post:nth-child(2) {  @include boxModel(false,false,80px 0);}
+}

@@ -80,6 +80,10 @@ form[name=subs-email],
   font-weight: 900;
   text-transform: uppercase;
 }
+.btn:hover {
+  color: #fab700;
+  background-color: #fff;
+}
 
 /*header start here*/
 header .wrapper-large {
@@ -172,10 +176,6 @@ header .menu {
 }
 .banner .btn-start {
   padding: 11px 2%;
-}
-.banner .btn:hover {
-  color: #fab700;
-  background-color: #fff;
 }
 
 /*banner ends here*/
@@ -408,10 +408,6 @@ section.market .market-title {
 section.market .market-sub-title {
   padding: 0 0 50px 0;
 }
-section.market li.market:nth-child(2),
-section.market .post:nth-child(2) {
-  padding: 0 3%;
-}
 section.market h5 {
   padding: 22px 0;
   color: #000;
@@ -441,6 +437,11 @@ section.market .description {
   font-weight: 600;
   text-align: center;
   text-transform: capitalize;
+}
+
+li.market:nth-child(2),
+.post:nth-child(2) {
+  padding: 0 3%;
 }
 
 /*market end here*/
@@ -745,6 +746,443 @@ section:last-child {
 
 /*feedback end here*/
 /*footer start here */
+footer {
+  padding: 102px 0 137px 0;
+  background-color: #04091e;
+}
+
+.connect {
+  flex-direction: column;
+}
+.connect:first-child {
+  flex-basis: 42%;
+}
+.connect:nth-child(2) {
+  padding: 0 7% 0 3%;
+  flex-basis: 35%;
+}
+.connect:nth-child(3) {
+  flex: 1;
+}
+.connect-head {
+  padding: 0 0 31px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.about-us-description,
+.copyright {
+  padding: 0 0 39px 0;
+  color: #454545;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.copyright {
+  padding: 0;
+}
+.copyright span, .copyright a {
+  display: inline-block;
+  color: #ffa500;
+  text-transform: capitalize;
+}
+.copyright a:hover {
+  color: #fff;
+}
+.copyright span:first-child {
+  text-indent: -9999px;
+}
+.copyright span:first-child::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f004";
+}
+
+.newsletter-description,
+.follow-description {
+  padding: 0 0 18px 0;
+  color: #454545;
+  font-size: 16px;
+}
+
+.subs-mail {
+  flex-basis: 90%;
+}
+
+.subscribe {
+  flex: 1;
+  position: relative;
+}
+.subscribe::before {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  color: #fff;
+  font-size: 21px;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f061";
+}
+.subscribe:hover::before {
+  color: #000;
+}
+
+form[name=subs-email] {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+input[name=subs-mail],
+input[name=email-submit] {
+  padding: 13px 3%;
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+input[name=email-submit] {
+  padding: 14px 0;
+  background-color: #ffa500;
+}
+
+input[name=email-submit] {
+  text-indent: -9999px;
+}
+
+.link {
+  padding: 0 20% 0 0;
+}
+.link .link:last-child {
+  padding: 0;
+}
+.link a {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  text-indent: -9999px;
+}
+.link:nth-child(1) a::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f39e";
+}
+.link:nth-child(2) a::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f099";
+}
+.link:nth-child(3) a::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f434";
+}
+.link:nth-child(4) a::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f1b4";
+}
+.link a:hover {
+  color: #ffa500;
+}
+
+input[name=subs-mail]::placeholder {
+  color: #454545;
+}
+
 /*footer end here */
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+  .description {
+    flex-basis: 60%;
+  }
+  .quote-title {
+    width: 95%;
+  }
+  .form {
+    padding: 0 3%;
+  }
+  .stat {
+    padding: 0 7% 0 0;
+  }
+  .fb-block figure {
+    max-height: 800px;
+  }
+  .client-name {
+    flex-basis: 100%;
+  }
+  .rating {
+    padding: 0;
+  }
+  .user-name {
+    padding: 0 2%;
+  }
+  .date {
+    flex-basis: 15%;
+  }
+  .subscribe::before {
+    left: 5%;
+  }
+  .connect:first-child {
+    flex-basis: 35%;
+  }
+}
+/*media query for 995px end here*/
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+  .menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+    font-size: 21px;
+    text-indent: -9999px;
+  }
+  .menu::before {
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: "\f0c9";
+  }
+  .menu:hover::before {
+    color: #ffa500;
+    content: "\f00d";
+    transition: all 2s;
+  }
+  .menu:hover + .nav-items {
+    width: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    transition: all 2s;
+  }
+  .banner p {
+    width: 100%;
+  }
+  .services {
+    width: fasle;
+    padding: 50px 0;
+    flex-direction: column;
+  }
+  .service {
+    width: fasle;
+    padding: 25px 0;
+  }
+  .service-description {
+    text-align: justify;
+  }
+  .request-quote .wrapper-large {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .request-quote .description {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .quote-sub-title,
+.quote-title,
+.quote-line,
+.quote-description {
+    width: 100%;
+    text-align: center;
+  }
+  .quote-description {
+    text-align: left;
+  }
+  .form {
+    width: 80%;
+    padding: 31px;
+  }
+  section.market {
+    padding: 100px 0;
+  }
+  .markets {
+    flex-direction: column;
+  }
+  li.market:nth-child(2) {
+    padding: 40px 0;
+  }
+  .market h5 {
+    text-align: center;
+  }
+  .market .description {
+    text-align: justify;
+  }
+  .data {
+    padding: 80px 0;
+  }
+  .statistics {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stat {
+    padding: 20px 0;
+    flex-basis: 50%;
+  }
+  .gallery {
+    padding: 100px 0;
+  }
+  .feedback {
+    padding: 80px 0;
+  }
+  .fb-block {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .controls {
+    justify-content: center;
+  }
+  section:last-child {
+    padding: 100px 0;
+  }
+  .post-sub-title {
+    width: 80%;
+  }
+  .posts {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .post:nth-child(2) {
+    padding: 40px 0;
+  }
+  .post > figure {
+    min-height: 215px;
+    max-height: 215px;
+    display: flex;
+    overflow: hidden;
+  }
+  .post .post-title {
+    text-align: center;
+  }
+  .post-description {
+    text-align: justify;
+  }
+  .connects {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .connect {
+    width: 80%;
+  }
+  .connect:nth-child(3) {
+    padding: 50px 0;
+  }
+  .connect-head,
+.newsletter-description,
+.follow-description,
+.about-us-description,
+.copyright {
+    text-align: center;
+  }
+  .connect:first-child {
+    order: 1;
+  }
+  .subscribe::before {
+    left: 25%;
+  }
+  .links {
+    align-items: center;
+    justify-content: center;
+  }
+  .link {
+    padding: 0 5% 0 0;
+  }
+  .link a::before {
+    font-size: 21px;
+  }
+  .user-name,
+.date {
+    flex: 1;
+  }
+}
+/*media query for 768px end here*/
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .banner {
+    padding: 80px 0;
+  }
+  .statistics {
+    flex-direction: column;
+  }
+  .gallery-items {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .gallery-item:nth-child(1),
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(4) {
+    min-height: 366px;
+    max-height: 366px;
+    width: 100%;
+    padding: 0 0 40px 0;
+    display: flex;
+    overflow: hidden;
+  }
+  .gallery-item img, .post img {
+    height: auto;
+  }
+  .footer {
+    padding: 100px 0;
+  }
+  .connect:nth-child(3) {
+    padding: 80px 0;
+  }
+  .user img {
+    height: 100%;
+  }
+}
+/*media query for 425px starts here*/
+@media only screen and (max-width: 425px) {
+  .user-name,
+.date {
+    flex-basis: 25%;
+  }
+  .clients-fb {
+    padding: 50px 0;
+  }
+  .subscribe::before {
+    left: 0;
+  }
+}
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+  .quote-title,
+.market-title,
+.gallery-title,
+.post-title {
+    font-size: 28px;
+  }
+  .post:nth-child(2) {
+    padding: 80px 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
