@@ -109,9 +109,8 @@ header {
 
   }
 
-  .menu {  @include display(none);}  
-
 }
+.menu {  @include display(none);}  
 
 /*header ends here*/
 
@@ -729,10 +728,10 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
     @include boxModel(false,100%);
     @include flex(true,false,right,center);
     @include position (relative);
-    @include font(false,false,21px);
+    @include font(#000,false,21px);
       text-indent: -9999px;
     
-    &::before {  @include icon('\f0c9');}
+    &::before {  @include icon('\f0c9',true);}
   
     &:hover::before {
         @include font(#ffa500);
@@ -740,8 +739,9 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
         transition: all 2s;
     }
     &:hover+.nav-items {
-      @include boxModel(50%);
-      z-index: 10;
+      @include boxModel(50%,100vh);
+      z-index: 1;
+      background-color: #fff;
       @include flex(true,false,center,center,column);
       @include position(absolute,false,0);
       transition: all 2s;

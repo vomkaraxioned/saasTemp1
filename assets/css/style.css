@@ -140,7 +140,8 @@ header .blogs .blog {
   color: #000;
   font-weight: 600;
 }
-header .menu {
+
+.menu {
   display: none;
 }
 
@@ -400,10 +401,10 @@ input[type=submit] {
 /*quotes ends here*/
 /*market start here*/
 section.market {
-  width: 123px 0 134px 0;
+  padding: 123px 0 134px 0;
 }
 section.market .market-title {
-  width: 0 0 10px 0;
+  padding: 0 0 10px 0;
 }
 section.market .market-sub-title {
   padding: 0 0 50px 0;
@@ -949,12 +950,15 @@ input[name=subs-mail]::placeholder {
     align-items: center;
     justify-content: right;
     position: relative;
+    color: #000;
     font-size: 21px;
     text-indent: -9999px;
   }
   .menu::before {
     font-family: "FontAwesome";
     font-weight: 900;
+    float: right;
+    text-indent: 0;
     content: "\f0c9";
   }
   .menu:hover::before {
@@ -964,7 +968,9 @@ input[name=subs-mail]::placeholder {
   }
   .menu:hover + .nav-items {
     width: 50%;
-    z-index: 10;
+    height: 100vh;
+    z-index: 1;
+    background-color: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;
