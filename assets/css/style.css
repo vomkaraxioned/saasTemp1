@@ -684,7 +684,6 @@ section:last-child {
   padding: 10px 0;
   border: 0 0 1px 0 solid #cdcdcd;
   align-items: center;
-  flex-basis: fasle;
 }
 
 .user figure {
@@ -978,15 +977,13 @@ input[name=subs-mail]::placeholder {
     width: 100%;
   }
   .services {
-    width: fasle;
     padding: 50px 0;
     flex-direction: column;
   }
-  .service {
-    width: fasle;
+  .services .service {
     padding: 25px 0;
   }
-  .service-description {
+  .services .service-description {
     text-align: justify;
   }
   .request-quote .wrapper-large {
@@ -1124,6 +1121,9 @@ input[name=subs-mail]::placeholder {
 /*media query for 768px end here*/
 /*media query for 540px starts here*/
 @media only screen and (max-width: 540px) {
+  .request-quote {
+    padding: 50px 0;
+  }
   .banner {
     padding: 80px 0;
   }

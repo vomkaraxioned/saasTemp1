@@ -804,11 +804,11 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
   .services {
     @include boxModel(false,false,50px 0);
     @include flex(false,false,false,false,column);
+
+    .service { @include boxModel(false,false,25px 0);}
+
+    .service-description {  text-align: justify;}
   }
-
-  .service { @include boxModel(false,false,25px 0);}
-
-  .service-description {  text-align: justify;}
 
   .request-quote .wrapper-large { @include flex(false,false,center,center,column);}
 
