@@ -402,23 +402,8 @@ input[type=submit] {
 section.market {
   width: 123px 0 134px 0;
 }
-section.market .market-title,
-section.market .gallery-title,
-section.market .post-title {
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
-  text-transform: capitalize;
-}
 section.market .market-title {
   width: 0 0 10px 0;
-}
-section.market .market-sub-title,
-section.market .gallery-sub-title,
-section.market .post-sub-title {
-  color: #454545;
-  font-size: 16px;
-  text-align: center;
 }
 section.market .market-sub-title {
   padding: 0 0 50px 0;
@@ -439,6 +424,23 @@ section.market .description {
   color: #454545;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.market-sub-title,
+.gallery-sub-title,
+.post-sub-title {
+  color: #454545;
+  font-size: 16px;
+  text-align: center;
+}
+
+.market-title,
+.gallery-title,
+.post-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 /*market end here*/
@@ -463,9 +465,286 @@ section.market .description {
 .number {
   width: 91px;
   height: 91px;
-  padding: 0;
+  border-radius: 50%;
+  background-color: #fab700;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.border {
+  padding: 25px;
+  border: 2px solid #fab700;
+  border-radius: 50%;
+  display: block;
+  content: "";
+}
+
+.stat-label {
+  padding: 25px 0 0 0;
+  color: #fff;
+  font-size: 21px;
+  text-align: center;
 }
 
 /*data end here*/
+/*gallery start here*/
+.gallery {
+  padding: 125px 0 149px 0;
+}
+.gallery-title {
+  padding: 0 0 15px 0;
+}
+.gallery-sub-title {
+  padding: 0 0 49px 0;
+}
+.gallery-items {
+  flex-wrap: wrap;
+}
+.gallery-item:first-child {
+  max-height: 369px;
+  padding: 0 3% 30px 0;
+  flex-basis: 70%;
+}
+.gallery-items img {
+  width: 100%;
+  height: 100%;
+}
+.gallery-item:nth-child(2) {
+  max-height: 369px;
+  padding: 0 0 30px 0;
+  flex: 1;
+}
+.gallery-item:nth-child(3) {
+  padding: 0 3% 0 0;
+  flex-basis: 50%;
+}
+.gallery-item:last-child {
+  flex: 1;
+}
+
+/*gallery end here*/
+/*feedback start here*/
+.feedback {
+  padding: 125px 0 116px 0;
+}
+.feedback-title {
+  padding: 0 0 15px 0;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 900;
+  text-align: center;
+}
+.feedback-sub-title {
+  padding: 0 0 50px 0;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.fb-block figure {
+  max-height: 306px;
+  flex-basis: 55%;
+  position: relative;
+}
+.fb-block figure::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f144";
+  align-items: center;
+  justify-content: center;
+}
+.fb-block figure:hover::before {
+  color: #ffa500;
+  cursor: pointer;
+}
+.fb-block img {
+  width: 100%;
+  height: 100%;
+}
+
+.clients-fb {
+  padding: 78px 0 72px 2%;
+  flex-basis: 45%;
+}
+
+.feedbacks {
+  padding: 0 0 30px 0;
+}
+
+.fb {
+  padding: 0 5% 0 0;
+  flex-wrap: wrap;
+}
+
+.fb:last-child {
+  padding: 0;
+}
+
+.client-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  flex-basis: 50%;
+}
+
+.ratings {
+  flex: 1;
+}
+
+.fb-description {
+  padding: 15px 0 0 0;
+  color: #fff;
+  font-size: 16px;
+  flex-basis: 100%;
+  line-height: 1.5;
+}
+
+.rating {
+  padding: 0 2% 0 0;
+  display: inline-block;
+  text-indent: -9999px;
+}
+.rating:last-child {
+  padding: 0;
+}
+.rating::before {
+  color: #656565;
+  font-size: 12px;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f005";
+}
+.rating:first-child::before, .rating:nth-child(2)::before, .rating:nth-child(3)::before {
+  color: #ffa500;
+  font-size: 12px;
+}
+
+.control {
+  padding: 0 3% 0 0;
+  display: block;
+  text-indent: -9999px;
+}
+.control:last-child {
+  padding: 0;
+}
+.control::before {
+  color: #656565;
+  font-size: 10px;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  float: right;
+  text-indent: 0;
+  content: "\f45c";
+}
+
+.active-control::before,
+.control:hover::before {
+  color: #ffa500;
+  cursor: pointer;
+}
+
+section:last-child {
+  padding: 125px 0 164px 0;
+}
+
+.post {
+  flex-direction: column;
+}
+.post-title {
+  padding: 0 0 38px 0;
+}
+.post-sub-title {
+  width: 60%;
+  padding: 0 0 73px 0;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.post > figure {
+  min-height: 215px;
+  max-height: 215px;
+  width: 100%;
+}
+.post img {
+  width: 100%;
+  height: 100%;
+}
+
+.user {
+  padding: 10px 0;
+  border: 0 0 1px 0 solid #cdcdcd;
+  align-items: center;
+  flex-basis: fasle;
+}
+
+.user figure {
+  width: 30px;
+  height: 30px;
+}
+
+.user-name,
+.date,
+.likes,
+.comments {
+  padding: 0 8% 0 2%;
+  color: #454545;
+  font-size: 12px;
+}
+
+.date,
+.likes,
+.comments {
+  padding: 0 2% 0 0;
+}
+
+.likes,
+.comments {
+  flex: 1;
+  text-align: center;
+}
+
+.post .post-title {
+  padding: 35px 0 25px 0;
+  font-size: 21px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.post-description {
+  color: #454545;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.comments::before,
+.likes::before {
+  color: #656565;
+  font-size: 16px;
+}
+
+.comments::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f075";
+}
+
+.likes::before {
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f004";
+}
+
+/*feedback end here*/
+/*footer start here */
+/*footer end here */
 
 /*# sourceMappingURL=style.css.map */

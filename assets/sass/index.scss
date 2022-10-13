@@ -345,20 +345,8 @@ input[type=submit] {
 section.market {
   @include boxModel(123px 0 134px 0);
 
-  .market-title,
-  .gallery-title,
-  .post-title {
-    @include font(false, false, 40px, 600, capitalize, center);
-  }
-
   .market-title {
     @include boxModel(0 0 10px 0);
-  }
-
-  .market-sub-title,
-  .gallery-sub-title,
-  .post-sub-title {
-    @include font(#454545, false, 16px, false, false, center);
   }
 
   .market-sub-title {
@@ -382,6 +370,18 @@ section.market {
   }
 }
 
+.market-sub-title,
+.gallery-sub-title,
+.post-sub-title {
+  @include font(#454545, false, 16px, false, false, center);
+}
+
+.market-title,
+.gallery-title,
+.post-title {
+  @include font(false, false, 40px, 600, capitalize, center);
+}
+
 /*market end here*/
 
  /*data start here */
@@ -399,9 +399,232 @@ section.market {
 }
 
 .number {
-  @include boxModel(91px,91px,0);
-
+  @include boxModel(91px,91px);
+  @include borderRadius(50%);
+  background-color: #fab700;
+  @include flex(false,false,center,center);
+  @include font(#fff,false,21px,900);
 }
 
+.border {
+  @include boxModel(false,false,25px,2px solid #fab700);
+  @include borderRadius(50%);
+  @include display(block);
+  content: "";
+}
+
+.stat-label {
+  @include boxModel(false,false,25px 0 0 0);
+  @include font(#fff,false,21px,false,false,center);
+}
 
 /*data end here*/
+
+ /*gallery start here*/
+        
+ .gallery {
+   @include boxModel(false,false,125px 0 149px 0);
+
+   &-title {  @include boxModel(false,false,0 0 15px 0);}
+  
+  &-sub-title { @include boxModel(false,false,0 0 49px 0);}
+  
+  &-items { @include flex(false,false,false,false,false,wrap);}
+  
+  &-item:first-child {
+    max-height: 369px;
+    @include boxModel(false,false,0 3% 30px 0);
+    @include flex(false,70%);
+  }
+  
+  &-items img {  @include boxModel(100%,100%);}
+  
+  &-item:nth-child(2) {
+    max-height: 369px;
+    @include boxModel(false,false, 0 0 30px 0);
+    flex: 1;
+  }
+  
+  &-item:nth-child(3) {
+    @include boxModel(false,false, 0 3% 0 0);
+    @include flex(false,50%);
+  }
+  
+  &-item:last-child { flex: 1;}
+}
+
+/*gallery end here*/
+
+ /*feedback start here*/
+        
+ .feedback {
+   @include boxModel(false,false,125px 0 116px 0);
+
+  &-title {
+    @include boxModel(false,false,0 0 15px 0);
+    @include font(#fff,false,42px,900,false,center); 
+  }
+  
+  &-sub-title {
+    @include boxModel(false,false,0 0 50px 0);
+    @include font(#fff,false,16px,false,false,center); 
+  }
+}
+
+.fb-block {
+  & figure {
+    max-height: 306px;
+    @include flex(false,55%);
+    @include position(relative);
+  }
+  
+  & figure::before {
+    @include boxModel(100%,100%);
+    @include position(absolute);
+    @include font(#fff,false,40px);
+    @include icon('\f144');
+    @include flex(false,false,center,center);
+  }
+  
+  & figure:hover::before {
+    @include font(#ffa500);
+    cursor: pointer;
+  }
+  
+  & img { @include boxModel(100%,100%);}
+  
+}
+
+.clients-fb {
+  @include boxModel(false,false, 78px 0 72px 2%);
+  @include flex(false,45%);
+}
+
+.feedbacks {  @include boxModel(false,false, 0 0 30px 0);}
+
+.fb {
+  @include boxModel(false,false, 0 5% 0 0);
+  @include flex(false,false,false,false,false,wrap);
+}
+
+.fb:last-child {   @include boxModel(false,false, 0);}
+
+.client-name {
+  @include font(#fff,false,16px,900);
+  @include flex(false,50%);
+}
+
+.ratings {  flex: 1;}
+
+.fb-description {
+  @include boxModel(false,false,15px 0 0 0);
+  @include font(#fff,false,16px);
+  @include flex(false,100%);
+  line-height: 1.5;
+}
+
+.rating {
+  @include boxModel(false,false,0 2% 0 0);
+  @include display(inline-block);
+  text-indent: -9999px;
+
+  &:last-child { @include boxModel(false,false,0);}
+  
+  &::before {
+    @include font(#656565,false,12px);
+    @include icon('\f005',true);
+  }
+  
+  &:first-child::before,
+  &:nth-child(2)::before,
+  &:nth-child(3)::before {  @include font(#ffa500,false,12px);}
+  
+}
+
+.control {
+  @include boxModel(false,false,0 3% 0 0);
+  @include display(block);
+  text-indent: -9999px;
+
+  &:last-child {  @include boxModel(false,false,0);}
+  
+  &::before {
+    @include font(#656565,false,10px);
+    @include icon('\f45c',true);
+  }
+  
+}
+
+.active-control::before,
+.control:hover::before {
+  @include font(#ffa500);
+  cursor: pointer;
+}
+
+section:last-child { @include boxModel(false,false,125px 0 164px 0);}
+
+.post {
+  @include flex(false,false,false,false,column);
+  &-title { @include boxModel(false,false,0 0 38px 0);}
+
+&-sub-title {
+  @include boxModel(60%,false,0 0 73px 0,false,$autoMargin);
+  line-height: 1.5;
+}
+
+&>figure {
+  min-height: 215px;
+  max-height: 215px;
+  @include boxModel(100%);
+}
+
+& img { @include boxModel(100%,100%);}
+}
+
+.user {
+  @include boxModel(false,false,10px 0,0 0 1px 0 solid #cdcdcd);
+  @include flex(false,fasle,false,center);
+}
+
+.user figure { @include boxModel(30px,30px);}
+
+.user-name,
+.date,
+.likes,
+.comments {
+  @include boxModel(false,false,0 8% 0 2%);
+  @include font(#454545,false,12px);
+}
+
+.date,
+.likes,
+.comments {   @include boxModel(false,false,0 2% 0 0);}
+
+.likes,
+.comments {
+  flex: 1;
+  @include font(false,false,false,false,false,center);
+}
+
+.post .post-title {
+  @include boxModel(false,false,35px 0 25px 0);
+  @include font(false,false,21px,900,false,left);
+}
+
+.post-description {
+  @include font(#454545,false,16px);
+  line-height: 1.5;
+}
+
+.comments::before,
+.likes::before {  @include font(#656565,false,16px);}
+
+.comments::before {  @include icon('\f075');}
+
+.likes::before {  @include icon('\f004');}
+
+ /*feedback end here*/
+
+/*footer start here */
+
+/*footer end here */
