@@ -117,7 +117,7 @@ header {
 
   .menu {
     @include display(none);
-  }
+  }  
 
 }
 
@@ -584,7 +584,7 @@ section:last-child { @include boxModel(false,false,125px 0 164px 0);}
 
 .user {
   @include boxModel(false,false,10px 0,0 0 1px 0 solid #cdcdcd);
-  @include flex(false,fasle,false,center);
+  @include flex(false,false,false,center);
 }
 
 .user figure { @include boxModel(30px,30px);}
@@ -802,11 +802,11 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
   .banner p { @include boxModel(100%);}
 
   .services {
-    @include boxModel(fasle,false,50px 0);
+    @include boxModel(false,false,50px 0);
     @include flex(false,false,false,false,column);
   }
 
-  .service { @include boxModel(fasle,false,25px 0);}
+  .service { @include boxModel(false,false,25px 0);}
 
   .service-description {  text-align: justify;}
 
@@ -907,6 +907,8 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
  /*media query for 540px starts here*/
         
  @media only screen and (max-width: 540px) {
+
+  .request-quote { @include boxModel(false, false, 50px 0);}
 
   .banner {  @include boxModel(false,false,80px 0);}
 
