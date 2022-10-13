@@ -38,9 +38,7 @@ form[name=contact],
 .connect,
 .subscribe-form,
 form[name=subs-email],
-.links {
-  @include flex(true);
-}
+.links { @include flex(true);}
 
 .btn {
   @include boxModel(false, false, 11px 0, 2px solid #fab700);
@@ -92,13 +90,9 @@ header {
       @include icon('\f107');
     }
 
-    &>a:hover::after {
-      content: '\f106';
-    }
+    &>a:hover::after {  content: '\f106'; }
 
-    &:hover .blogs {
-      @include flex(true)
-    }
+    &:hover .blogs {  @include flex(true);}
   }
 
   .blogs {
@@ -115,9 +109,7 @@ header {
 
   }
 
-  .menu {
-    @include display(none);
-  }  
+  .menu {  @include display(none);}  
 
 }
 
@@ -126,13 +118,9 @@ header {
 .banner {
   @include boxModel(false, false, 101px 0 205px 0);
 
-  .wrapper {
-    @include flex(false, false, false, center, column);
-  }
+  .wrapper {  @include flex(false, false, false, center, column);}
 
-  .banner-sub-title {
-    @include font(#fff, false, 16px, false, uppercase, center);
-  }
+  .banner-sub-title {  @include font(#fff, false, 16px, false, uppercase, center);}
 
   .banner-title {
     @include boxModel(false, false, 29px 0 35px 0);
@@ -145,9 +133,7 @@ header {
     line-height: 1.5;
   }
 
-  .btn-start {
-    @include boxModel(false, false, 11px 2%);
-  }
+  .btn-start {  @include boxModel(false, false, 11px 2%);}
 
 }
 
@@ -165,9 +151,7 @@ header {
     @include position(relative);
   }
 
-  .service:last-child {
-    @include boxModel(false, false, 0);
-  }
+  .service:last-child {  @include boxModel(false, false, 0);}
 
   & .icon {
     @include boxModel(62px, 38px, 0, false);
@@ -186,13 +170,9 @@ header {
     content: "";
   }
 
-  .icon::before {
-    transform: rotate(60deg);
-  }
+  .icon::before {  transform: rotate(60deg);}
 
-  .icon::after {
-    transform: rotate(-60deg);
-  }
+  .icon::after {  transform: rotate(-60deg);}
 
   .icon span {
     @include boxModel(inherit, inherit);
@@ -200,17 +180,11 @@ header {
     text-indent: -9999px;
   }
 
-  .service:nth-child(1) .icon span::before {
-    @include icon('\e2ca', true);
-  }
+  .service:nth-child(1) .icon span::before {  @include icon('\e2ca', true);}
 
-  .service:nth-child(2) .icon span::before {
-    @include icon('\f135', true);
-  }
+  .service:nth-child(2) .icon span::before {  @include icon('\f135', true);}
 
-  .service:nth-child(3) .icon span::before {
-    @include icon('\f188', true);
-  }
+  .service:nth-child(3) .icon span::before {  @include icon('\f188', true);}
 
   .service-title {
     @include boxModel(false, false, 40px 0 28px 0);
@@ -237,9 +211,7 @@ header {
   @include flex(false, 66.6%);
 }
 
-.quote-sub-title {
-  @include font(#f9bb65, false, 16px);
-}
+.quote-sub-title {  @include font(#f9bb65, false, 16px);}
 
 .quote-title {
   @include boxModel(48%, false, 16px 0 34px 0);
@@ -257,9 +229,7 @@ header {
   line-height: 1.5;
 }
 
-.btn-start-now {
-  @include boxModel(false, false, 11px 6%);
-}
+.btn-start-now {  @include boxModel(false, false, 11px 6%);}
 
 .form {
   flex: 1;
@@ -285,9 +255,7 @@ select {
   @include font(#fff);
 }
 
-.select-service {
-  @include position(relative);
-}
+.select-service {  @include position(relative);}
 
 .select-service::before {
   @include position(absolute, 25%, 5%);
@@ -295,13 +263,9 @@ select {
   @include icon('\f107');
 }
 
-select {
-  appearance: none;
-}
+select {  appearance: none;}
 
-option {
-  @include font(#000);
-}
+option {  @include font(#000);}
 
 textarea {
   box-sizing: border-box;
@@ -312,46 +276,33 @@ textarea {
 }
 
 input::placeholder,
-textarea::placeholder {
-  @include font(#fff);
-}
+textarea::placeholder {  @include font(#fff);}
 
 input:focus,
 textarea:focus,
-select:focus {
-  outline: transparent;
-}
+select:focus {  outline: transparent;}
 
-input[type=submit] {
-  @include font(false, false, 12px);
-}
+input[type=submit] {  @include font(false, false, 12px);}
 
-.form div {
-  @include boxModel(100%);
-}
+.form div {  @include boxModel(100%);}
 
 .select-service,
 .name,
 .phone,
 .email,
-.textarea {
-  @include boxModel(false, false, 0 0 4px 0);
-}
+.textarea {  @include boxModel(false, false, 0 0 4px 0);}
 
 /*quotes ends here*/
 
 /*market start here*/
 
 section.market {
-  @include boxModel(123px 0 134px 0);
 
-  .market-title {
-    @include boxModel(0 0 10px 0);
-  }
+  @include boxModel(false,false,123px 0 134px 0);
 
-  .market-sub-title {
-    @include boxModel(false, false, 0 0 50px 0);
-  }
+  .market-title {  @include boxModel(false,false,0 0 10px 0);}
+
+  .market-sub-title {  @include boxModel(false, false, 0 0 50px 0);}
 
   h5 {
     @include boxModel(false, false, 22px 0);
@@ -367,20 +318,14 @@ section.market {
 
 .market-sub-title,
 .gallery-sub-title,
-.post-sub-title {
-  @include font(#454545, false, 16px, false, false, center);
-}
+.post-sub-title {  @include font(#454545, false, 16px, false, false, center);}
 
 .market-title,
 .gallery-title,
-.post-title {
-  @include font(false, false, 40px, 600, capitalize, center);
-}
+.post-title {  @include font(false, false, 40px, 600, capitalize, center);}
 
 li.market:nth-child(2),
-  .post:nth-child(2) {
-    @include boxModel(false, false, 0 3%);
-  }
+  .post:nth-child(2) {  @include boxModel(false, false, 0 3%);}
 
 
 /*market end here*/
@@ -428,30 +373,30 @@ li.market:nth-child(2),
 
    &-title {  @include boxModel(false,false,0 0 15px 0);}
   
-  &-sub-title { @include boxModel(false,false,0 0 49px 0);}
+    &-sub-title { @include boxModel(false,false,0 0 49px 0);}
   
-  &-items { @include flex(false,false,false,false,false,wrap);}
+    &-items { @include flex(false,false,false,false,false,wrap);}
   
-  &-item:first-child {
+    &-item:first-child {
     max-height: 369px;
     @include boxModel(false,false,0 3% 30px 0);
     @include flex(false,70%);
-  }
+    }
   
-  &-items img {  @include boxModel(100%,100%);}
+    &-items img {  @include boxModel(100%,100%);}
   
-  &-item:nth-child(2) {
-    max-height: 369px;
-    @include boxModel(false,false, 0 0 30px 0);
-    flex: 1;
-  }
+    &-item:nth-child(2) {
+      max-height: 369px;
+      @include boxModel(false,false, 0 0 30px 0);
+      flex: 1;
+    }
   
-  &-item:nth-child(3) {
-    @include boxModel(false,false, 0 3% 0 0);
-    @include flex(false,50%);
-  }
+    &-item:nth-child(3) {
+      @include boxModel(false,false, 0 3% 0 0);
+      @include flex(false,50%);
+    }
   
-  &-item:last-child { flex: 1;}
+    &-item:last-child { flex: 1;}
 }
 
 /*gallery end here*/
@@ -459,6 +404,7 @@ li.market:nth-child(2),
  /*feedback start here*/
         
  .feedback {
+
    @include boxModel(false,false,125px 0 116px 0);
 
   &-title {
@@ -565,21 +511,22 @@ li.market:nth-child(2),
 section:last-child { @include boxModel(false,false,125px 0 164px 0);}
 
 .post {
+
   @include flex(false,false,false,false,column);
   &-title { @include boxModel(false,false,0 0 38px 0);}
 
-&-sub-title {
-  @include boxModel(60%,false,0 0 73px 0,false,$autoMargin);
-  line-height: 1.5;
-}
+  &-sub-title {
+    @include boxModel(60%,false,0 0 73px 0,false,$autoMargin);
+    line-height: 1.5;
+  }
 
-&>figure {
-  min-height: 215px;
-  max-height: 215px;
-  @include boxModel(100%);
-}
+  &>figure {
+    min-height: 215px;
+    max-height: 215px;
+    @include boxModel(100%);
+  }
 
-& img { @include boxModel(100%,100%);}
+  & img { @include boxModel(100%,100%);}
 }
 
 .user {
@@ -634,21 +581,22 @@ footer {
 }
 
 .connect {  
+
   @include flex(false,false,false,false,column);
 
   &:first-child {  @include flex(false,42%);}
 
-&:nth-child(2) {
-  @include boxModel(false,false, 0 7% 0 3%);
-  @include flex(false,35%);
-}
+  &:nth-child(2) {
+    @include boxModel(false,false, 0 7% 0 3%);
+    @include flex(false,35%);
+  }
 
-&:nth-child(3) {  flex: 1;}
+  &:nth-child(3) {  flex: 1;}
 
-&-head {
-  @include boxModel(false,false, 0 0 31px 0);
-  @include font(#fff,false,18px,900);
-}
+  &-head {
+    @include boxModel(false,false, 0 0 31px 0);
+    @include font(#fff,false,18px,900);
+  }
 }
 
 .about-us-description,
@@ -662,16 +610,16 @@ footer {
   @include boxModel(false,false,0);
 
   & span,
-& a {
-  @include display(inline-block);
-  @include font(#ffa500,false,false,false,capitalize);
-}
+  & a {
+    @include display(inline-block);
+    @include font(#ffa500,false,false,false,capitalize);
+  }
 
-& a:hover {  @include font(#fff);}
+  & a:hover {  @include font(#fff);}
 
-& span:first-child {  text-indent: -9999px;}
+  & span:first-child {  text-indent: -9999px;}
 
-& span:first-child::before {  @include icon('\f004',true);}
+  & span:first-child::before {  @include icon('\f004',true);}
 }
 
 .newsletter-description,
@@ -716,25 +664,26 @@ input[name=email-submit] {
 input[name=email-submit] {  text-indent: -9999px;}
 
 .link {  
+
   @include boxModel(false,false,0 20% 0 0);
 
   .link:last-child {  @include boxModel(false,false,0);}
 
-& a {
-  @include display(block);
-  @include font(#fff,false,12px);
-  text-indent: -9999px;
-}
+  & a {
+    @include display(block);
+    @include font(#fff,false,12px);
+    text-indent: -9999px;
+  }
 
-&:nth-child(1) a::before {  @include icon('\f39e',true);}
+  &:nth-child(1) a::before {  @include icon('\f39e',true);}
+ 
+  &:nth-child(2) a::before {   @include icon('\f099',true);}
 
-&:nth-child(2) a::before {   @include icon('\f099',true);}
+  &:nth-child(3) a::before {   @include icon('\f434',true);}
 
-&:nth-child(3) a::before {   @include icon('\f434',true);}
+  &:nth-child(4) a::before {   @include icon('\f1b4',true);}
 
-&:nth-child(4) a::before {   @include icon('\f1b4',true);}
-
-& a:hover {  @include font(#ffa500);}
+  & a:hover {  @include font(#ffa500);}
 
 }
 
@@ -785,18 +734,18 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
     
     &::before {  @include icon('\f0c9');}
   
-  &:hover::before {
-      @include font(#ffa500);
-      content: '\f00d';
+    &:hover::before {
+        @include font(#ffa500);
+        content: '\f00d';
+        transition: all 2s;
+    }
+    &:hover+.nav-items {
+      @include boxModel(50%);
+      z-index: 10;
+      @include flex(true,false,center,center,column);
+      @include position(absolute,false,0);
       transition: all 2s;
-  }
-  &:hover+.nav-items {
-    @include boxModel(50%);
-    z-index: 10;
-    @include flex(true,false,center,center,column);
-    @include position(absolute,false,0);
-    transition: all 2s;
-  }
+    }
   }
 
   .banner p { @include boxModel(100%);}
@@ -898,9 +847,7 @@ input[name=subs-mail]::placeholder {   @include font(#454545);}
   .link a::before {  @include font(false,false,21px);}
 
   .user-name,
-  .date {
-      flex: 1;
-  }
+  .date {  flex: 1;}
 }
  /*media query for 768px end here*/
 
